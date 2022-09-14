@@ -1,13 +1,12 @@
 package com.example.test.controller;
 
-
 import org.springframework.stereotype.Controller;
 
-import java.sql.SQLOutput;
+import javax.annotation.Resource;
 
 @Controller
 public class test01 {
-        public static void main(){
-            System.out.println("本地");
+   public static void main(){
+            System.out.println("远端");
         }
 }
