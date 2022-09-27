@@ -7,6 +7,6 @@ import javax.annotation.Resource;
 @Controller
 public class test01 {
    public static void main(){
-            System.out.println("远端");
+            System.out.println("远端1");
         }
 }
