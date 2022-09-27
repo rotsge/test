@@ -8,13 +8,13 @@ import org.springframework.stereotype.Service;
 public class test01Service{
 private String name;
 private int age;
-private String hobby;
+private String hobby1;
 
 @Autowired
     private test02 test02;
 
 public void test(){
-test02.print(name,age,hobby);
+test02.print(name,age,hobby1);
 }
 
 
