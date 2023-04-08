@@ -2,7 +2,7 @@ package com.example.test.controller;
 
 public enum Response {
     SUCCESS("200","成功"),
-    FAIL("201","失敗");
+    FAIL("404","失敗");
 
     private String code;
     private String msg;
