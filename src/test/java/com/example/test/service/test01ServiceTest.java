@@ -8,8 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import javax.annotation.Resource;
 import java.io.FileReader;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
+import java.util.*;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -114,5 +113,47 @@ private test01Service test01Service;
                     }
                 }
         }
+    }
+
+    class Father {
+        public void func1(){
+            func2();
+        }
+        public void func2(){
+            System.out.println("AAA");
+        }
+        public void func3(){
+            System.out.println("333");
+        }
+    }
+    class child extends Father{
+        public void func1(int i){
+            System.out.println("BBB");
+        }
+        public void func2(){
+            System.out.println("CCC");
+        }
+        public void func3(){
+            func1();
+        }
+    }
+
+    @Test
+    public void test1(){
+        Father child = new child();
+        Father father = new Father();
+        child.func3();
+    }
+
+    @Test
+    public void test3(){
+        Map<String, String> map = new HashMap<>();
+        map.put("11","111");
+        map.put("22","222");
+        map.put("33","333");
+        Set<String> strings = map.keySet();
+        System.out.println(strings);
+        List<String> strings1 = new ArrayList<>(strings);
+        System.out.println(strings1);
     }
 }
